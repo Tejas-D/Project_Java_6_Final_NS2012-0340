@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns:tns="http://ForumService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://ForumService/" name="ForumWebServiceService">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://ForumService/" schemaLocation="http://localhost:8080/Forum_Service/ForumWebService?xsd=1"></xsd:import>
+    </xsd:schema>
+  </types>
+  <message name="addUser">
+    <part element="tns:addUser" name="parameters"></part>
+  </message>
+  <message name="addUserResponse">
+    <part element="tns:addUserResponse" name="parameters"></part>
+  </message>
+  <message name="checkLogin">
+    <part element="tns:checkLogin" name="parameters"></part>
+  </message>
+  <message name="checkLoginResponse">
+    <part element="tns:checkLoginResponse" name="parameters"></part>
+  </message>
+  <message name="getQuestion">
+    <part element="tns:getQuestion" name="parameters"></part>
+  </message>
+  <message name="getQuestionResponse">
+    <part element="tns:getQuestionResponse" name="parameters"></part>
+  </message>
+  <message name="getAnswer">
+    <part element="tns:getAnswer" name="parameters"></part>
+  </message>
+  <message name="getAnswerResponse">
+    <part element="tns:getAnswerResponse" name="parameters"></part>
+  </message>
+  <message name="checkEmail">
+    <part element="tns:checkEmail" name="parameters"></part>
+  </message>
+  <message name="checkEmailResponse">
+    <part element="tns:checkEmailResponse" name="parameters"></part>
+  </message>
+  <message name="addTopic">
+    <part element="tns:addTopic" name="parameters"></part>
+  </message>
+  <message name="addTopicResponse">
+    <part element="tns:addTopicResponse" name="parameters"></part>
+  </message>
+  <message name="getTopics">
+    <part element="tns:getTopics" name="parameters"></part>
+  </message>
+  <message name="getTopicsResponse">
+    <part element="tns:getTopicsResponse" name="parameters"></part>
+  </message>
+  <message name="getTopicDescription">
+    <part element="tns:getTopicDescription" name="parameters"></part>
+  </message>
+  <message name="getTopicDescriptionResponse">
+    <part element="tns:getTopicDescriptionResponse" name="parameters"></part>
+  </message>
+  <message name="getTopicDatePosted">
+    <part element="tns:getTopicDatePosted" name="parameters"></part>
+  </message>
+  <message name="getTopicDatePostedResponse">
+    <part element="tns:getTopicDatePostedResponse" name="parameters"></part>
+  </message>
+  <message name="editName">
+    <part element="tns:editName" name="parameters"></part>
+  </message>
+  <message name="editNameResponse">
+    <part element="tns:editNameResponse" name="parameters"></part>
+  </message>
+  <message name="editSurname">
+    <part element="tns:editSurname" name="parameters"></part>
+  </message>
+  <message name="editSurnameResponse">
+    <part element="tns:editSurnameResponse" name="parameters"></part>
+  </message>
+  <message name="editDob">
+    <part element="tns:editDob" name="parameters"></part>
+  </message>
+  <message name="editDobResponse">
+    <part element="tns:editDobResponse" name="parameters"></part>
+  </message>
+  <message name="editPassword">
+    <part element="tns:editPassword" name="parameters"></part>
+  </message>
+  <message name="editPasswordResponse">
+    <part element="tns:editPasswordResponse" name="parameters"></part>
+  </message>
+  <message name="editSecQ">
+    <part element="tns:editSecQ" name="parameters"></part>
+  </message>
+  <message name="editSecQResponse">
+    <part element="tns:editSecQResponse" name="parameters"></part>
+  </message>
+  <message name="editSecA">
+    <part element="tns:editSecA" name="parameters"></part>
+  </message>
+  <message name="editSecAResponse">
+    <part element="tns:editSecAResponse" name="parameters"></part>
+  </message>
+  <message name="editEmail">
+    <part element="tns:editEmail" name="parameters"></part>
+  </message>
+  <message name="editEmailResponse">
+    <part element="tns:editEmailResponse" name="parameters"></part>
+  </message>
+  <message name="getComments">
+    <part element="tns:getComments" name="parameters"></part>
+  </message>
+  <message name="getCommentsResponse">
+    <part element="tns:getCommentsResponse" name="parameters"></part>
+  </message>
+  <message name="getReplies">
+    <part element="tns:getReplies" name="parameters"></part>
+  </message>
+  <message name="getRepliesResponse">
+    <part element="tns:getRepliesResponse" name="parameters"></part>
+  </message>
+  <message name="postComments">
+    <part element="tns:postComments" name="parameters"></part>
+  </message>
+  <message name="postReplies">
+    <part element="tns:postReplies" name="parameters"></part>
+  </message>
+  <portType name="ForumWebService">
+    <operation name="addUser">
+      <input message="tns:addUser"></input>
+      <output message="tns:addUserResponse"></output>
+    </operation>
+    <operation name="checkLogin">
+      <input message="tns:checkLogin"></input>
+      <output message="tns:checkLoginResponse"></output>
+    </operation>
+    <operation name="getQuestion">
+      <input message="tns:getQuestion"></input>
+      <output message="tns:getQuestionResponse"></output>
+    </operation>
+    <operation name="getAnswer">
+      <input message="tns:getAnswer"></input>
+      <output message="tns:getAnswerResponse"></output>
+    </operation>
+    <operation name="checkEmail">
+      <input message="tns:checkEmail"></input>
+      <output message="tns:checkEmailResponse"></output>
+    </operation>
+    <operation name="addTopic">
+      <input message="tns:addTopic"></input>
+      <output message="tns:addTopicResponse"></output>
+    </operation>
+    <operation name="getTopics">
+      <input message="tns:getTopics"></input>
+      <output message="tns:getTopicsResponse"></output>
+    </operation>
+    <operation name="getTopicDescription">
+      <input message="tns:getTopicDescription"></input>
+      <output message="tns:getTopicDescriptionResponse"></output>
+    </operation>
+    <operation name="getTopicDatePosted">
+      <input message="tns:getTopicDatePosted"></input>
+      <output message="tns:getTopicDatePostedResponse"></output>
+    </operation>
+    <operation name="editName">
+      <input message="tns:editName"></input>
+      <output message="tns:editNameResponse"></output>
+    </operation>
+    <operation name="editSurname">
+      <input message="tns:editSurname"></input>
+      <output message="tns:editSurnameResponse"></output>
+    </operation>
+    <operation name="editDob">
+      <input message="tns:editDob"></input>
+      <output message="tns:editDobResponse"></output>
+    </operation>
+    <operation name="editPassword">
+      <input message="tns:editPassword"></input>
+      <output message="tns:editPasswordResponse"></output>
+    </operation>
+    <operation name="editSecQ">
+      <input message="tns:editSecQ"></input>
+      <output message="tns:editSecQResponse"></output>
+    </operation>
+    <operation name="editSecA">
+      <input message="tns:editSecA"></input>
+      <output message="tns:editSecAResponse"></output>
+    </operation>
+    <operation name="editEmail">
+      <input message="tns:editEmail"></input>
+      <output message="tns:editEmailResponse"></output>
+    </operation>
+    <operation name="getComments">
+      <input message="tns:getComments"></input>
+      <output message="tns:getCommentsResponse"></output>
+    </operation>
+    <operation name="getReplies">
+      <input message="tns:getReplies"></input>
+      <output message="tns:getRepliesResponse"></output>
+    </operation>
+    <operation name="postComments">
+      <input message="tns:postComments"></input>
+    </operation>
+    <operation name="postReplies">
+      <input message="tns:postReplies"></input>
+    </operation>
+  </portType>
+  <binding type="tns:ForumWebService" name="ForumWebServicePortBinding">
+    <ns1:UsingAddressing xmlns:ns1="http://www.w3.org/2005/08/addressing/wsdl"></ns1:UsingAddressing>
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <operation name="addUser">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="checkLogin">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getQuestion">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getAnswer">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="checkEmail">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="addTopic">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getTopics">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getTopicDescription">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getTopicDatePosted">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="editName">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="editSurname">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="editDob">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="editPassword">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="editSecQ">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="editSecA">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="editEmail">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getComments">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getReplies">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="postComments">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+    </operation>
+    <operation name="postReplies">
+      <soap:operation soapAction=""></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+    </operation>
+  </binding>
+  <service name="ForumWebServiceService">
+    <port binding="tns:ForumWebServicePortBinding" name="ForumWebServicePort">
+      <soap:address location="http://localhost:8080/Forum_Service/ForumWebService"></soap:address>
+    </port>
+  </service>
+</definitions>

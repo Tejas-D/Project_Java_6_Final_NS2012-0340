@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ForumService/" xmlns:tns="http://ForumService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="addTopic" type="tns:addTopic"/>
+
+  <xs:element name="addTopicResponse" type="tns:addTopicResponse"/>
+
+  <xs:element name="addUser" type="tns:addUser"/>
+
+  <xs:element name="addUserResponse" type="tns:addUserResponse"/>
+
+  <xs:element name="checkEmail" type="tns:checkEmail"/>
+
+  <xs:element name="checkEmailResponse" type="tns:checkEmailResponse"/>
+
+  <xs:element name="checkLogin" type="tns:checkLogin"/>
+
+  <xs:element name="checkLoginResponse" type="tns:checkLoginResponse"/>
+
+  <xs:element name="editDob" type="tns:editDob"/>
+
+  <xs:element name="editDobResponse" type="tns:editDobResponse"/>
+
+  <xs:element name="editEmail" type="tns:editEmail"/>
+
+  <xs:element name="editEmailResponse" type="tns:editEmailResponse"/>
+
+  <xs:element name="editName" type="tns:editName"/>
+
+  <xs:element name="editNameResponse" type="tns:editNameResponse"/>
+
+  <xs:element name="editPassword" type="tns:editPassword"/>
+
+  <xs:element name="editPasswordResponse" type="tns:editPasswordResponse"/>
+
+  <xs:element name="editSecA" type="tns:editSecA"/>
+
+  <xs:element name="editSecAResponse" type="tns:editSecAResponse"/>
+
+  <xs:element name="editSecQ" type="tns:editSecQ"/>
+
+  <xs:element name="editSecQResponse" type="tns:editSecQResponse"/>
+
+  <xs:element name="editSurname" type="tns:editSurname"/>
+
+  <xs:element name="editSurnameResponse" type="tns:editSurnameResponse"/>
+
+  <xs:element name="getAnswer" type="tns:getAnswer"/>
+
+  <xs:element name="getAnswerResponse" type="tns:getAnswerResponse"/>
+
+  <xs:element name="getComments" type="tns:getComments"/>
+
+  <xs:element name="getCommentsResponse" type="tns:getCommentsResponse"/>
+
+  <xs:element name="getQuestion" type="tns:getQuestion"/>
+
+  <xs:element name="getQuestionResponse" type="tns:getQuestionResponse"/>
+
+  <xs:element name="getReplies" type="tns:getReplies"/>
+
+  <xs:element name="getRepliesResponse" type="tns:getRepliesResponse"/>
+
+  <xs:element name="getTopicDatePosted" type="tns:getTopicDatePosted"/>
+
+  <xs:element name="getTopicDatePostedResponse" type="tns:getTopicDatePostedResponse"/>
+
+  <xs:element name="getTopicDescription" type="tns:getTopicDescription"/>
+
+  <xs:element name="getTopicDescriptionResponse" type="tns:getTopicDescriptionResponse"/>
+
+  <xs:element name="getTopics" type="tns:getTopics"/>
+
+  <xs:element name="getTopicsResponse" type="tns:getTopicsResponse"/>
+
+  <xs:element name="postComments" type="tns:postComments"/>
+
+  <xs:element name="postReplies" type="tns:postReplies"/>
+
+  <xs:complexType name="editPassword">
+    <xs:sequence>
+      <xs:element name="newPass" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editPasswordResponse"/>
+
+  <xs:complexType name="postReplies">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+      <xs:element name="userReply" type="xs:string" minOccurs="0"/>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="commentId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkLogin">
+    <xs:sequence>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkLoginResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTopicDescription">
+    <xs:sequence>
+      <xs:element name="topicName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTopicDescriptionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editSecA">
+    <xs:sequence>
+      <xs:element name="newAns" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editSecAResponse"/>
+
+  <xs:complexType name="getAnswer">
+    <xs:sequence>
+      <xs:element name="userAns" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAnswerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getReplies">
+    <xs:sequence>
+      <xs:element name="commentId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRepliesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTopics"/>
+
+  <xs:complexType name="getTopicsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editSurname">
+    <xs:sequence>
+      <xs:element name="newSurname" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editSurnameResponse"/>
+
+  <xs:complexType name="addUser">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="surname" type="xs:string" minOccurs="0"/>
+      <xs:element name="dob" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="secQ" type="xs:string" minOccurs="0"/>
+      <xs:element name="secA" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getQuestion">
+    <xs:sequence>
+      <xs:element name="userEmail" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getQuestionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editDob">
+    <xs:sequence>
+      <xs:element name="newDob" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editDobResponse"/>
+
+  <xs:complexType name="editEmail">
+    <xs:sequence>
+      <xs:element name="newEmail" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editEmailResponse"/>
+
+  <xs:complexType name="checkEmail">
+    <xs:sequence>
+      <xs:element name="userEmail" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkEmailResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTopicDatePosted">
+    <xs:sequence>
+      <xs:element name="topicName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTopicDatePostedResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getComments">
+    <xs:sequence>
+      <xs:element name="topicName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCommentsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="postComments">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+      <xs:element name="userComment" type="xs:string" minOccurs="0"/>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="topicId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editSecQ">
+    <xs:sequence>
+      <xs:element name="newQues" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editSecQResponse"/>
+
+  <xs:complexType name="editName">
+    <xs:sequence>
+      <xs:element name="newName" type="xs:string" minOccurs="0"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="editNameResponse"/>
+
+  <xs:complexType name="addTopic">
+    <xs:sequence>
+      <xs:element name="user" type="xs:string" minOccurs="0"/>
+      <xs:element name="topicName" type="xs:string" minOccurs="0"/>
+      <xs:element name="topicDesc" type="xs:string" minOccurs="0"/>
+      <xs:element name="topicDate" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addTopicResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
